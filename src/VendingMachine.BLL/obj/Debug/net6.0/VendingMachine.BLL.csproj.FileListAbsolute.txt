@@ -1,0 +1,15 @@
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.BLL.deps.json
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.BLL.dll
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.BLL.pdb
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.csproj.AssemblyReference.cache
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.AssemblyInfoInputs.cache
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.AssemblyInfo.cs
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.csproj.CoreCompileInputs.cache
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.dll
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\refint\VendingMachine.BLL.dll
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.pdb
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\ref\VendingMachine.BLL.dll
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.DAL.dll
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.DAL.pdb
+D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.csproj.CopyComplete

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\VendingMachine.Presentation.props" />
+</Project>

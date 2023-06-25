@@ -1,0 +1,54 @@
+﻿.btn.btn-rounded {
+    border-radius: 1rem;
+}
+
+.content__interface {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+.drinks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px 15px;
+    grid-template-rows: auto;
+}
+
+.drink-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    width: 150px;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+.drink-card button {
+    height: 220px;
+    flex-basis: 100%;
+}
+
+.sidepanel {
+    margin-left: 30px;
+    width: 300px;
+}
+
+.coins-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 15px;
+    grid-template-rows: auto;
+}
+
+.sidepanel__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.sidepanel__bottom {
+    margin-top: 50px;
+}

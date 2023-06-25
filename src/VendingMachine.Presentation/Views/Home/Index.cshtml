@@ -1,0 +1,75 @@
+﻿@model IndexViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="~/css/index/wrapper.css" />
+  <link rel="stylesheet" href="~/css/index/content.css" />
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+
+  <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="~/js/index/index.js"></script>
+  <script type="text/javascript" src="~/js/index/ajax.js"></script>
+</head>
+
+<body class="wrapper">
+  <header class="header" style="align-self: center;">
+    <span style="margin-left: 50px; font-size: 16px; color:darkgray;">
+      <i style="font-size: inherit;">Vending machine.</i> Select your drink.
+    </span>
+  </header>
+  
+  <content class="content">
+    <div class="content__interface">
+        <div class="drinks-grid">
+          @foreach(var drink in Model.drinks)
+          {
+            <div class="drink-card">
+              <button class="btn btn-outline-secondary fs-5"
+                      id="@drink.Id" onclick="purchaseDrink(this.id)">@drink.Name</button>
+              <div class="fs-5">Cost: @drink.Cost</div>
+              <div>
+                <span class="fs-5">Stock: </span>
+                <span class="fs-5" id="js_quantityDrink_@drink.Id">@drink.Quantity</span>
+              </div>
+            </div>
+          }
+        </div>
+        <div class="sidepanel">
+            <div class="sidepanel__top">
+                <div>
+                    <span class="fs-4">Balance: </span>
+                    <span class="fs-4" id="js_balance">@Model.CurrentBallance</span>
+                </div>
+                <button class="btn btn-primary fs-4" onclick="withdraw()">Withdraw</button>
+            </div>
+            <p class="fs-4">Insert coin:</p>
+            <div class="coins-grid">
+              @foreach (var coin in Model.coins)
+              {
+                    <button class="btn btn-outline-success btn-rounded fs-5" disabled="@coin.IsJammed"
+                            id="@coin.Id" onclick="addCoin(this.id)">@coin.Nominal</button>
+              }
+            </div>
+            <div class="sidepanel__bottom">
+                <p class="fs-4">Information:</p>
+                <span id="js_information">
+                    Welcome!<br /> Insert coins, select a drink, withdraw money or make another choise.
+                </span>
+            </div>
+        </div>
+    </div>
+  </content>
+
+  <footer class="footer">
+
+  </footer>
+</body>
+
+</html>
