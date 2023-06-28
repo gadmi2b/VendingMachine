@@ -2,8 +2,8 @@
 {
     public class IndexDTO
     {
-        public List<DrinkDTO> drinks { get; set; }
-        public List<CoinDTO> coins { get; set; }
-        public int CurrentBallance { get; set; }
+        public List<DrinkDTO> Drinks { get; set; }
+        public List<CoinDTO> Coins { get; set; }
+        public int Ballance { get; set; }
     }
 }

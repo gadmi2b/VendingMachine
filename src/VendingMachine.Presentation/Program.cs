@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Data.SqlClient;
 using VendingMachine.DAL.EF;
 using VendingMachine.DAL.Interfaces;
 using VendingMachine.DAL.Repositories;
@@ -13,11 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 string connectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
-SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder(connectionString);
-sqlConnectionStringBuilder.AttachDBFilename = @"D:\Database\VendingMachine.mdf";
-
-builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(sqlConnectionStringBuilder.ConnectionString));
-
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddAutoMapper(typeof(AppMappingProfile));
 
 builder.Services.AddTransient<IVendingMachineService, VendingMachineService>();

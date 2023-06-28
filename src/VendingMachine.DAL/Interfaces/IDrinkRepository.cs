@@ -4,10 +4,14 @@ namespace VendingMachine.DAL.Interfaces
 {
     public interface IDrinkRepository
     {
-        List<Drink> GetDrinks();
+        Task<List<Drink>> GetDrinksAsync();
 
-        Drink GetDrink(long drinkId);
+        Task<Drink> GetDrinkAsync(long drinkId);
 
-        void UpdateQuantity(Drink updatedDrink);
+        Task UpdateQuantityAsync(Drink updatedDrink);
+        Task DeleteDrinkAsync(long drinkId);
+        Task<bool> IsExistWithSameNameAsync(string Name);
+        Task AddDrinkAsync(Drink drink);
+        Task UpdateDrinkAsync(Drink updatedDrink);
     }
 }

@@ -12,3 +12,17 @@ D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\ne
 D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.pdb
 D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.genruntimeconfig.cache
 D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\ref\VendingMachine.DAL.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\bin\Debug\net6.0\VendingMachine.DAL.deps.json
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\bin\Debug\net6.0\VendingMachine.DAL.runtimeconfig.json
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\bin\Debug\net6.0\VendingMachine.DAL.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\bin\Debug\net6.0\VendingMachine.DAL.pdb
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.csproj.AssemblyReference.cache
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.AssemblyInfoInputs.cache
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.AssemblyInfo.cs
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.csproj.CoreCompileInputs.cache
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\refint\VendingMachine.DAL.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.pdb
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\VendingMachine.DAL.genruntimeconfig.cache
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.DAL\obj\Debug\net6.0\ref\VendingMachine.DAL.dll

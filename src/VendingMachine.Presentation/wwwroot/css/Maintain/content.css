@@ -1,0 +1,33 @@
+﻿.btn.btn-rounded {
+    border-radius: 1rem;
+}
+
+.content-flex {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+td input {
+    border: none;
+    outline: none;
+    padding: 4px 4px;
+    text-align: left;
+    width: 100%;
+}
+
+.sidepanel {
+    margin-left: 30px;
+    width: 350px;
+}
+
+.sidepanel__bottom {
+    margin-top: 50px;
+}
+
+.coins-grid {
+    display: grid;
+    grid-gap: 10px 15px;
+    grid-template-columns: 33% 33%;
+    grid-template-rows: auto;
+}

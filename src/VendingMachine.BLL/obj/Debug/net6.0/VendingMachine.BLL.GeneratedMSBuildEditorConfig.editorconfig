@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VendingMachine.BLL
-build_property.ProjectDir = D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\
+build_property.ProjectDir = E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\

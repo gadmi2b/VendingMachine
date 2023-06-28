@@ -4,8 +4,8 @@ namespace VendingMachine.Presentation.Models
 {
     public class IndexViewModel
     {
-        public List<DrinkDTO> drinks { get; set; } = new List<DrinkDTO>();
-        public List<CoinDTO> coins { get; set; } = new List<CoinDTO>();
-        public int CurrentBallance { get; set; }
+        public List<DrinkDTO> Drinks { get; set; } = new List<DrinkDTO>();
+        public List<CoinDTO> Coins { get; set; } = new List<CoinDTO>();
+        public int Balance { get; set; }
     }
 }

@@ -17,11 +17,11 @@ namespace VendingMachine.Tests.BLL.TestData
         {
             yield return new object[]
             {
-                40,
+                0,
                 _initialCoins,
                 new Dictionary<CoinDTO, int>
                 {
-                    { _initialCoins[3], 4 },
+                    
                 },
             };
             yield return new object[]

@@ -2,10 +2,10 @@
 {
     public interface IUserRepository
     {
-        int GetUserBalance(long userId);
+        Task<int> GetUserBalanceAsync(long userId);
 
-        void AddBalance(long userId, int value);
+        Task AddBalanceAsync(long userId, int value);
 
-        void ReduceBalance(long userId, int value);
+        Task ReduceBalanceAsync(long userId, int value);
     }
 }

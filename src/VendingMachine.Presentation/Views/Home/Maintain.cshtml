@@ -1,1 +1,122 @@
-﻿
+﻿@model MaintainViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="~/css/maintain/wrapper.css" />
+  <link rel="stylesheet" href="~/css/maintain/content.css" />
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+  <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="~/js/maintain/ajax.js"></script>
+</head>
+
+<body class="wrapper">
+  <header class="header" style="align-self: center;">
+    <nav class="nav">
+      <a class="nav-link fs-5" asp-controller="Home" asp-action="Index">Home</a>
+      <a class="nav-link fs-5" asp-controller="Home" asp-action="ExtractDrinks">Extract drinks</a>
+    </nav>
+  </header>
+
+  <content class="content">
+    <div class="content-flex">
+      <div>
+        <form asp-controller="Home" asp-action="AddDrink" method="post" style="max-width: 400px;">
+          <p class="fs-5 fw-bold">Add new drink:</p>
+          <div class="mb-3">
+            <label for="drinkName" class="form-label">Name</label>
+            <input name="Name" type="text" class="form-control" id="drinkName" aria-describedby="nameHelp">
+            <div id="nameHelp" class="form-text">Must be 1-50 characters long.</div>
+          </div>
+          <div class="mb-3">
+            <label for="drinkCost" class="form-label">Cost</label>
+            <input name="Cost" type="text" class="form-control" id="drinkCost">
+          </div>
+          <div class="mb-3">
+            <label for="drinkQuantity" class="form-label">Quantity</label>
+            <input name="Quantity" type="text" class="form-control" id="drinkQuantity">
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+
+        <p class="fs-5 fw-bold" style="margin-top: 50px;">Operate drinks or remove selected:</p>
+        <form asp-controller="Home" asp-action="DeleteDrinks" method="post">
+            <table class="table table-responsive table-sm table-bordered align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Cost</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(int i = 0; i < Model.Drinks.Count(); i++)
+                    {
+                        <tr>
+                            <td><input name="selectedDrinkIds" value="@Model.Drinks[i].Id" type="checkbox" /></td>
+                            <td><input id="@("js_drinkName_" + Model.Drinks[i].Id)" value="@Model.Drinks[i].Name" type="text" /></td>
+                            <td><input id="@("js_drinkCost_" + Model.Drinks[i].Id)" value="@Model.Drinks[i].Cost" type="text" /></td>
+                            <td><input id="@("js_drinkQuantity_" + Model.Drinks[i].Id)" value="@Model.Drinks[i].Quantity" type="text" /></td>
+                            <td><input class="btn btn-primary fs-6" value="Update" type="button" onclick="updateDrink(@Model.Drinks[i].Id)" /></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+          <button type="submit" class="btn btn-primary">Delete</button>
+        </form>
+      </div>
+
+      <div class="sidepanel">
+        <p class="fs-5 fw-bold">Select coin to make it jammed/unjammed:</p>
+        <div class="coins-grid">
+          @foreach(var coin in Model.Coins)
+          {
+            string className = "btn-outline-success";
+            if (coin.IsJammed)
+              className = "btn-warning";
+
+            <button class="btn @className btn-rounded fs-5"
+                    id="@coin.Id" onclick="changeIsJammedState(this.id)">
+              @coin.Nominal
+            </button>
+          }
+        </div>
+        <div class="sidepanel__bottom">
+          <p class="fs-5 fw-bold">Information:</p>
+          @{
+              string msg = string.Empty;
+              if (Model.ErrorMessages.Count == 0)
+              {
+                  msg = "Welcome!\n" +
+                         "Add or modify drinks, make coins jammed or unjammed.";
+              }
+              else
+              {
+                  foreach (string errorMessage in Model.ErrorMessages)
+                  {
+                      msg = msg == string.Empty ? errorMessage : "\n" + errorMessage;
+                  }
+              }
+          }
+          <span id="js_information" style="white-space: pre-line;">
+            @msg
+          </span>
+        </div>
+      </div>
+    </div>
+  </content>
+
+  <footer class="footer">
+  </footer>
+</body>
+
+</html>

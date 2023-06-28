@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -17,8 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\Maintain\" />
-    <Folder Include="wwwroot\js\Maintain\" />
+    <Folder Include="obj\Debug\net6.0\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net6.0\App_Data\VendingMachine.mdf" />
   </ItemGroup>
 
 </Project>

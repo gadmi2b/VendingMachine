@@ -4,6 +4,9 @@ using VendingMachine.BLL.DTO;
 [assembly: InternalsVisibleTo("VendingMachine.Tests")]
 namespace VendingMachine.BLL.Handlers
 {
+    /// <summary>
+    /// Provides all operations related to withdraw calculations processes
+    /// </summary>
     internal class WithdrawCalculator
     {
         List<CoinDTO> _originalCoins;
@@ -12,14 +15,18 @@ namespace VendingMachine.BLL.Handlers
         {
             _originalCoins = originalCoins;
         }
+
         /// <summary>
         /// Calculates withdrowed coins and their quantites
         /// </summary>
         /// <param name="balance"></param>
         /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public Dictionary<CoinDTO, int> CalculateWithdrawedCoins(int balance)
         {
-            //_originalCoins.Sort((x, y) => (x.Nominal > y.Nominal);
+            if (balance < 0)
+                throw new ArgumentException();
+
             _originalCoins = _originalCoins.OrderByDescending(c => c.Nominal).ToList();
 
             Dictionary<CoinDTO, int> coinsQuantities = new Dictionary<CoinDTO, int>();
@@ -35,7 +42,13 @@ namespace VendingMachine.BLL.Handlers
 
             return coinsQuantities;
         }
-
+        
+        /// <summary>
+        /// Calculates summary nominal of all coins and their quantites
+        /// provided to method
+        /// </summary>
+        /// <param name="coinsQuantities"></param>
+        /// <returns></returns>
         public int CalculateWithdrawedNominals(Dictionary<CoinDTO, int> coinsQuantities)
         {
             int nominals = 0;

@@ -11,33 +11,50 @@ namespace VendingMachine.DAL.Repositories
 
         public UserRepository(DataContext ctx) => _context = ctx;
 
-        public int GetUserBalance(long userId)
+        /// <summary>
+        /// Returns user balance by userId
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns>user balance</returns>
+        public async Task<int> GetUserBalanceAsync(long userId)
         {
-            User? user = _context.Users.AsNoTracking()
-                            .First(u => u.Id == userId);
-            ArgumentNullException.ThrowIfNull(user, nameof(userId)); ;
+            User? user = await _context.Users.AsNoTracking()
+                            .FirstOrDefaultAsync(u => u.Id == userId);
+            ArgumentNullException.ThrowIfNull(user, nameof(user));
 
             return user.Balance;
         }
 
-        public void AddBalance(long userId, int value)
+        /// <summary>
+        /// Adds value to user balance
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public async Task AddBalanceAsync(long userId, int value)
         {
-            User? user = _context.Users.Find(userId);
-            ArgumentNullException.ThrowIfNull(user, nameof(userId));
+            User? user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            ArgumentNullException.ThrowIfNull(user, nameof(user));
 
             user!.Balance = user.Balance + value;
 
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void ReduceBalance(long userId, int value)
+        /// <summary>
+        /// Reduces user balance for value
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public async Task ReduceBalanceAsync(long userId, int value)
         {
-            User? user = _context.Users.Find(userId);
-            ArgumentNullException.ThrowIfNull(user, nameof(userId));
+            User? user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            ArgumentNullException.ThrowIfNull(user, nameof(user));
 
             user!.Balance = user.Balance - value;
 
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

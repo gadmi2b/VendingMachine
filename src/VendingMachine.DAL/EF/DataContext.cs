@@ -3,6 +3,9 @@ using VendingMachine.DAL.Entities;
 
 namespace VendingMachine.DAL.EF
 {
+    /// <summary>
+    /// Represents context and all tables from database 
+    /// </summary>
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> opts) : base(opts) { }

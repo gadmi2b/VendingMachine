@@ -13,3 +13,18 @@ D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\ne
 D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.DAL.dll
 D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.DAL.pdb
 D:\Visual Studio\source\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.csproj.CopyComplete
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.BLL.deps.json
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.BLL.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.BLL.pdb
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.DAL.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\bin\Debug\net6.0\VendingMachine.DAL.pdb
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.csproj.AssemblyReference.cache
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.AssemblyInfoInputs.cache
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.AssemblyInfo.cs
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.csproj.CoreCompileInputs.cache
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.csproj.CopyComplete
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\refint\VendingMachine.BLL.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\VendingMachine.BLL.pdb
+E:\Microsoft Visual Studio\repos\VendingMachine\src\VendingMachine.BLL\obj\Debug\net6.0\ref\VendingMachine.BLL.dll

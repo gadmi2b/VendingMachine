@@ -2,7 +2,7 @@
 {
     public class MaintainDTO
     {
-        public List<DrinkDTO> drinks { get; set; }
-        public List<CoinDTO> coins { get; set; }
+        public List<DrinkDTO> Drinks { get; set; }
+        public List<CoinDTO> Coins { get; set; }
     }
 }
