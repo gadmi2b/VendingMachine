@@ -294,3 +294,5 @@ E:\Microsoft Visual Studio\repos\VendingMachine\tests\VendingMachine.Tests\obj\D
 E:\Microsoft Visual Studio\repos\VendingMachine\tests\VendingMachine.Tests\obj\Debug\net6.0\VendingMachine.Tests.pdb
 E:\Microsoft Visual Studio\repos\VendingMachine\tests\VendingMachine.Tests\obj\Debug\net6.0\VendingMachine.Tests.genruntimeconfig.cache
 E:\Microsoft Visual Studio\repos\VendingMachine\tests\VendingMachine.Tests\obj\Debug\net6.0\ref\VendingMachine.Tests.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\tests\VendingMachine.Tests\bin\Debug\net6.0\Castle.Core.dll
+E:\Microsoft Visual Studio\repos\VendingMachine\tests\VendingMachine.Tests\bin\Debug\net6.0\Moq.dll

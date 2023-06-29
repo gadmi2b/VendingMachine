@@ -9,28 +9,22 @@ namespace VendingMachine.BLL.Handlers
     /// </summary>
     internal class WithdrawCalculator
     {
-        List<CoinDTO> _originalCoins;
-
-        public WithdrawCalculator(List<CoinDTO> originalCoins)
-        {
-            _originalCoins = originalCoins;
-        }
-
         /// <summary>
         /// Calculates withdrowed coins and their quantites
         /// </summary>
+        /// <param name="originalCoins"></param>
         /// <param name="balance"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        public Dictionary<CoinDTO, int> CalculateWithdrawedCoins(int balance)
+        public Dictionary<CoinDTO, int> CalculateWithdrawedCoins(List<CoinDTO> originalCoins, int balance)
         {
             if (balance < 0)
                 throw new ArgumentException();
 
-            _originalCoins = _originalCoins.OrderByDescending(c => c.Nominal).ToList();
+            originalCoins = originalCoins.OrderByDescending(c => c.Nominal).ToList();
 
             Dictionary<CoinDTO, int> coinsQuantities = new Dictionary<CoinDTO, int>();
-            foreach (var coin in _originalCoins)
+            foreach (var coin in originalCoins)
             {
                 int quantity = balance/coin.Nominal;
                 if (quantity > 0)
