@@ -4,6 +4,6 @@
     {
         public List<DrinkDTO> Drinks { get; set; }
         public List<CoinDTO> Coins { get; set; }
-        public int Ballance { get; set; }
+        public int Balance { get; set; }
     }
 }

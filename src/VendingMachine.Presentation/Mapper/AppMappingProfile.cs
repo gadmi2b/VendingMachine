@@ -13,7 +13,8 @@ namespace VendingMachine.Presentation.Mapper
             CreateMap<Coin, CoinDTO>();
 
             CreateMap<IndexDTO, IndexViewModel>();
-            CreateMap<MaintainDTO, MaintainViewModel>();
+            CreateMap<MaintainDTO, MaintainViewModel>()
+                .ForMember(dest => dest.ErrorMessages, opt => opt.Ignore());
         }
     }
 }

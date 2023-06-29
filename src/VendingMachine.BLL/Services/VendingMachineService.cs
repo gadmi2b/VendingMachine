@@ -45,7 +45,7 @@ namespace VendingMachine.BLL.Services
                 {
                     Drinks = _mapper.Map<List<DrinkDTO>>(await _drinkRepository.GetDrinksAsync()),
                     Coins = _mapper.Map<List<CoinDTO>>(await _coinRepository.GetCoinsAsync()),
-                    Ballance = await _userRepository.GetUserBalanceAsync(UserIdentity.UserId),
+                    Balance = await _userRepository.GetUserBalanceAsync(UserIdentity.UserId),
                 };
                 return indexDTO;
 
@@ -106,7 +106,7 @@ namespace VendingMachine.BLL.Services
         {
             try
             {
-                Coin coin = await _coinRepository.GetCoinAsync(coinId);
+                Coin? coin = await _coinRepository.GetCoinAsync(coinId);
                 if (coin == null)
                     throw new VendingMachineException("Unable to add coin. " +
                                                       "Selected coin was not recognized.");
@@ -253,8 +253,9 @@ namespace VendingMachine.BLL.Services
                                                       "Try again, and if the problem persists, " +
                                                       "see your system administrator.");
 
-                WithdrawCalculator withdrawCalculator = new WithdrawCalculator(availableCoins);
-                Dictionary<CoinDTO, int> coinsQuantities = withdrawCalculator.CalculateWithdrawedCoins((int)balance);
+                WithdrawCalculator withdrawCalculator = new WithdrawCalculator();
+                Dictionary<CoinDTO, int> coinsQuantities = withdrawCalculator.CalculateWithdrawedCoins(availableCoins,
+                                                                                                       (int)balance);
                 if (coinsQuantities.Count() == 0)
                     throw new VendingMachineException("Unable to withdraw. " +
                                                       "There are no appropriate coins to provide operation. " +
