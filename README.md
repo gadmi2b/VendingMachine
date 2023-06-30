@@ -25,10 +25,10 @@ The first page is UI for following interactions:
 - Each coin has a nominal and could be jammed - means that it can't be inseted in the machine.
   
   [There are business rules around this interactions]
-  - Unable insert coin that is jammed;
-  - Unable purchase a drink if balance less than cost of drink;
-  - Unable purchase a drink if all drinks are sold out;
-  - User balance will not disappear if he stops using machine.
+  - Unable to insert coin that is jammed;
+  - Unable to purchase a drink if balance less than cost of drink;
+  - Unable to purchase a drink if all drinks are sold out;
+  - User balance will not disappear if user stops using machine.
 
 The second page is administrative page for maintain purposes:
 - User can see all drinks, add a new one, remove or update existing;
