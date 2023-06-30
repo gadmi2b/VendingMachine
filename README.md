@@ -36,9 +36,9 @@ The second page is administrative page for maintain purposes:
 - It also provides possibility to extract all information about drinks as a txt file.
 
   [There are business rules around this interactions]
-    - Unable to add a drink with a cost <= 0;
-    - Unable to add a drink with a quantity < 0;
-    - Unable to add a drink with a name length <=0 and >50 chars.
+    - Unable to add a drink with a cost <= 0 or update it's cost to <= 0;
+    - Unable to add a drink with a quantity < 0 or update it's quantity to < 0;
+    - Unable to add a drink with a name length <=0 and >50 chars or update it's name to same criteria.
     - to access maintain page a password should be provided as a parameter in the adress bar (?key=admin).
 
 A database is a simple .mdf file (SQL Server 2019 Express).
