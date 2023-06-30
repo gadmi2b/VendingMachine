@@ -15,7 +15,7 @@ An application was created as a test assignment by one of IT companies in a limi
 	- xUnit v2.4.2
 - N-Layer architecture. 
 
-It consits from 2 page and simulates work process of a Vending machine with drinks.
+It consits from 2 pages and simulates work process of a Vending machine with drinks.
 
 The first page is UI for following interactions:
 - User can add concrete coins to the machine and increase his balance;
